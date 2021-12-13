@@ -4,7 +4,7 @@ services:
 
   pihole:
     container_name: pihole
-    image: pihole/pihole:v5.7
+    image: pihole/pihole:v5.8
     environment:
       TZ: 'Italy/Rome'
       WEBPASSWORD: '' # security first!
@@ -26,7 +26,7 @@ services:
 
   wireguard:
     container_name: wireguard
-    image: ghcr.io/linuxserver/wireguard:version-v1.0.20210914
+    image: ghcr.io/linuxserver/wireguard:1.0.20210914
     cap_add:
       - NET_ADMIN
       - SYS_MODULE
