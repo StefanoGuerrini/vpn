@@ -35,7 +35,7 @@ services:
       - PGID=1000
       - TZ=Europe/Rome
       - SERVERURL=$PUBLIC_IP
-      - SERVERPORT=53
+      - SERVERPORT=443
       - PEERS=stefano,tv,martina
       - PEERDNS=$PRIVATE_IP #private ip (pihole is dns)
     # - ALLOWEDIPS=0.0.0.0/0 #optional
