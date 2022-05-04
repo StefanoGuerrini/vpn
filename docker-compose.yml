@@ -40,8 +40,8 @@ services:
       - PEERDNS=$PRIVATE_IP #private ip (pihole is dns)
     # - ALLOWEDIPS=0.0.0.0/0 #optional
     volumes:
-      - /path/to/appdata/config:/config
-      - /lib/modules:/lib/modules
+      - ./wireguard/config:/config
+      - ./wireguard/lib/modules:/lib/modules
     ports:
       - 443:51820/udp
     sysctls:
