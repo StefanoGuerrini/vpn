@@ -17,4 +17,4 @@ jobs:
       - name: Sync docker-compose
         run: rsync docker-compose.yml ${{ secrets.SSH_USER }}@${{ secrets.PUBLIC_IP }}:${{ secrets.REMOTE_PATH }}
       - name: Restart services
-        run: ssh ${{ secrets.SSH_USER }}@${{ secrets.PUBLIC_IP }} 'PUBLIC_IP=${{ secrets.PUBLIC_IP }} PRIVATE_IP=${{ secrets.PRIVATE_IP }} docker-compose up --force-recreate -d'
+        run: ssh ${{ secrets.SSH_USER }}@${{ secrets.PUBLIC_IP }} 'PUBLIC_IP=${{ secrets.PUBLIC_IP }} PRIVATE_IP=${{ secrets.PRIVATE_IP }} VPN_PEERS=${{ vars.VPN_PEERS }} docker-compose up --force-recreate -d'

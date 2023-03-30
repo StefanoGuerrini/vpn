@@ -36,7 +36,7 @@ services:
       - TZ=Europe/Rome
       - SERVERURL=$PUBLIC_IP
       - SERVERPORT=443
-      - PEERS=stefano,tv,martina
+      - PEERS=$VPN_PEERS
       - PEERDNS=$PRIVATE_IP #private ip (pihole is dns)
     # - ALLOWEDIPS=0.0.0.0/0 #optional
     volumes:

@@ -14,6 +14,7 @@ Fork this repo and set the following secrets:
 | REMOTE_PATH | docker-compose.yaml location inside the server, for example /config/               |
 | SSH_USER    | SSH User, create a specific user with restricted permission, don't use a root user |
 | SSH_KEY     | Private key of the ssh user                                                        |
+| VPN_PEERS   | List of peers separate by comma (example: peer1,peer2,peer3..)                     |
 
 Commit, Push and Run! :rocket:
 
