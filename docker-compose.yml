@@ -39,6 +39,7 @@ services:
       - PEERS=$VPN_PEERS
       - PEERDNS=$PRIVATE_IP #private ip (pihole is dns)
     # - ALLOWEDIPS=0.0.0.0/0 #optional
+      - PERSISTENTKEEPALIVE_PEERS=$VPN_PEERS
     volumes:
       - ./wireguard/config:/config
       - ./wireguard/lib/modules:/lib/modules
