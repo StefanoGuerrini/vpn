@@ -13,7 +13,7 @@ jobs:
           known_hosts: ${{ secrets.PUBLIC_IP }}
           if_key_exists: ignore
       - name: Adding Known Hosts
-        run: ssh-keyscan -6 -H ${{ secrets.PUBLIC_IP }} >> ~/.ssh/known_hosts
+        run: ssh-keyscan -H ${{ secrets.PUBLIC_IP }} >> ~/.ssh/known_hosts
       - name: Sync docker-compose
         run: rsync docker-compose.yml ${{ secrets.SSH_USER }}@${{ secrets.PUBLIC_IP }}:${{ secrets.REMOTE_PATH }}
       - name: Restart services
