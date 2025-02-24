@@ -9,8 +9,8 @@ Fork this repo and set the following secrets:
 
 | NAME        | DESCRIPTION                                                                        |
 |-------------|------------------------------------------------------------------------------------|
-| PUBLIC_IP   | Server public IP                                                                   |  
-| PRIVATE_IP  | Docker host IP                                                                     |
+| PUBLIC_IP   | Server public IP (IPv4)                                                                 |  
+| PRIVATE_IP  | Docker host IP (run `ip a`)                                                                    |
 | REMOTE_PATH | docker-compose.yaml location inside the server, for example /config/               |
 | SSH_USER    | SSH User, create a specific user with restricted permission, don't use a root user |
 | SSH_KEY     | Private key of the ssh user                                                        |
@@ -18,6 +18,8 @@ Fork this repo and set the following secrets:
 
 Commit, Push and Run! :rocket:
 
+# Requirements
+Make sure your server has a public IPv4 and these packets installed: docker, docker-compose, rsync.  
 
 ### TODO:
 - Setup machine via terraform 
